@@ -16,21 +16,22 @@
                             <div class="col-lg-10 col-xl-7 mx-auto">
                                 <h3 class="text-tonics">Tonics Tz</h3>
                                 <p class="text-muted mb-4">Tengeneza Account mpya!</p>
-                                <form>
+                                <form action="" method="POST">
+                                    @csrf
                                     <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" placeholder="Username" required=""
+                                        <input name="username" type="text" placeholder="Username" required=""
                                             autofocus="" class="form-control ">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input id="inputEmail" type="number" placeholder="Phone +255..." required=""
+                                        <input name="phone" type="number" placeholder="Phone +255..." required=""
                                             autofocus="" class="form-control ">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input id="inputPassword" type="password" placeholder="Password" required=""
+                                        <input name="password1" type="password" placeholder="Password" required=""
                                             class="form-control ">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input id="inputPassword" type="password" placeholder="Confirm Password" required=""
+                                        <input name="password2" type="password" placeholder="Confirm Password" required=""
                                             class="form-control ">
                                     </div>
                                     

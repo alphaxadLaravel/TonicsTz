@@ -16,7 +16,8 @@
                             <div class="col-lg-10 col-xl-7 mx-auto">
                                 <h3 class="text-tonics">Tonics Tz</h3>
                                 <p class="text-muted mb-4">Ingia Katika Account yako!</p>
-                                <form>
+                                <form action="" method="POST">
+                                    @csrf
                                     <div class="form-group mb-3">
                                         <input id="inputEmail" type="text" placeholder="Username" required=""
                                             autofocus="" class="form-control ">

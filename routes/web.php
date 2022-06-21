@@ -55,3 +55,5 @@ Route::get('/cart', function () {
 Route::get('/add', function () {
     return view('admin.add');
 });
+
+

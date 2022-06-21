@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id')->unsigned();
-            $table->string('computer_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('computer_id')->unsigned();
             $table->string('Quantity');
             $table->string('Amount');
             $table->string('Phone');
