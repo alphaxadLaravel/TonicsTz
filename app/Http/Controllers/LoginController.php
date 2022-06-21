@@ -14,11 +14,12 @@ class LoginController extends Controller
             'username' => 'required|string',
             'password' => 'required|string',
             'password_confirmation' => 'required|string',
-            'phone' => 'required|numeric|unique:users|max:10',
+            'phone' => 'required|numeric|unique:users',
         ]);
+        
 
-        $check = User::where(['IDNumber'=>request()->regNumber])->first();
-        dd($check);
+        if (request('password') == request('password_confirmation')) {
+            $check = User::where(['username'=>request()->username])->first();
 
             if(!$check){
                 User::Create([
@@ -32,9 +33,6 @@ class LoginController extends Controller
                 session()->flash('present','');
                 return redirect('/');
             }
-
-        if (request('password') == request('password_confirmation')) {
-            
            
         }
     }
