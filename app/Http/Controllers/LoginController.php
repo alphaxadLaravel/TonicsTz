@@ -14,14 +14,12 @@ class LoginController extends Controller
             'username' => 'required|string',
             'password' => 'required|string',
             'password_confirmation' => 'required|string',
-            'phone' => 'required|numeric|unique:users|min:9|max:10',
+            'phone' => 'required|numeric|unique:users|max:10',
         ]);
 
-        $check = User::all();
+        $check = User::where(['IDNumber'=>request()->regNumber])->first();
         dd($check);
-        // $check = User::where(['IDNumber'=>request()->regNumber])->first();
 
-            dd($check);
             if(!$check){
                 User::Create([
                     'username' => request('username'),
