@@ -2,12 +2,12 @@
 
 @section('pages')
     <section class="inner-page">
-        <section class="h-100">
+        <section class="h-100" >
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-10">
 
-                        <div class="card rounded-3 mb-4">
+                        <div class="card rounded-3 mb-4" data-aos="fade-down">
                             <div class="card-body p-3">
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card " data-aos="fade-up">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <button type="button" class="btn btn-outline-secondary btn-sm "><i class="mdi mdi-keyboard-backspace"></i>Back to Search</button>

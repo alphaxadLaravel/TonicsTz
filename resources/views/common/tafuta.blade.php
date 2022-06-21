@@ -87,7 +87,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mt-5" data-aos="fade-up">
+                                <div class="col-md-6 mt-5">
                                     <button type="submit"
                                         class=" btn btn-outline-secondary w-100 text-uppercase  shadow-sm">Tafuta</button>
                                 </div>
