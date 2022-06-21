@@ -23,7 +23,6 @@ class ComputerController extends Controller
         ]);
 
         $photoName = time().'.'.request('picha')->extension();  
-        dd($photoName);
 
         request('picha')->move(public_path('computer'), $photoName);
 
