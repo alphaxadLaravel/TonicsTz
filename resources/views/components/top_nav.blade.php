@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top shadow-sm">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="/" class="logo d-flex align-items-center">
             {{-- <img src="assets/img/logo.png" alt=""> --}}
 
             <span><i class="ri-slack-fill"></i> Tonics Tz</span>
