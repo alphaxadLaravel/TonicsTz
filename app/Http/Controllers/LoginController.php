@@ -14,7 +14,7 @@ class LoginController extends Controller
             'username' => 'required|string',
             'password' => 'required|string',
             'password_confirmation' => 'required|string',
-            'phone' => 'required|numeric|unique:users',
+            'phone' => 'required|numeric|unique:users|min:9|max:11',
         ]);
         
 
@@ -34,6 +34,32 @@ class LoginController extends Controller
                 return redirect('/');
             }
            
+        }
+    }
+
+    public function login(){
+        request()->validate([
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
+        
+
+        $check = User::where(['username'=>request()->username])->first();
+        dd($check);
+
+        if(!$check){
+            
+            session()->flash('none','');
+            return redirect('/');
+        } if($check->password != request('password')){
+            
+            session()->flash('none','');
+            return redirect('/');
+        }
+        elseif($check->status == "admin" || $check->status == "user"){
+
+            request()->session()->put('user',$check);
+            return redirect('/');
         }
     }
 }

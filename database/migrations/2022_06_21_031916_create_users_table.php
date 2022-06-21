@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String("username");
             $table->String("phone")->unique();
             $table->String("password");
+            $table->String("status");
             $table->timestamps();
         });
     }

@@ -60,3 +60,6 @@ Route::get('/add', function () {
 // register here
 Route::post('/register_here',[LoginController::class,'register']);
 
+// login route here
+Route::post('/login_here',[LoginController::class,'login']);
+
