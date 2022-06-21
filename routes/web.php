@@ -50,3 +50,8 @@ Route::get('/computer', function () {
 Route::get('/cart', function () {
     return view('common.cart');
 });
+
+// Ongeza hapa
+Route::get('/add', function () {
+    return view('admin.add');
+});

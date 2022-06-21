@@ -1,4 +1,4 @@
-<header id="header" class="header fixed-top">
+<header id="header" class="header fixed-top shadow-sm">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
@@ -15,6 +15,8 @@
           <li><a class="nav-link scrollto" href="/#huduma">Huduma</a></li>
           <li><a class="nav-link scrollto" href="/#team">Team</a></li>
           <li><a class="nav-link scrollto" href="/#brand">Brand</a></li>
+          <li><a class="nav-link scrollto" href="/add">Add</a></li>
+          <li><a class="nav-link scrollto" href="/cart"><i class="mdi mdi-cart mdi-24px"></i><span class="text-danger">(0)</span></a></li>
           <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
