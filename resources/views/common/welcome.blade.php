@@ -235,7 +235,7 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/alpha.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team3.jpg') }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <h4>David Bugingo</h4>
@@ -247,10 +247,10 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/alpha.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team2.jpg') }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Sarah Jhonson</h4>
+                            <h4>Mtey Mtey</h4>
                             <span>Product Manager</span>
                         </div>
                     </div>
@@ -259,10 +259,10 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/alpha.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team3.jpg') }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>William Anderson</h4>
+                            <h4>Shafii David</h4>
                             <span>CTO</span>
                         </div>
                     </div>
@@ -271,10 +271,10 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/alpha.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team2.jpg') }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Shafii Jepson</h4>
+                            <h4>Felister Jenson</h4>
                             <span>Muhasibu</span>
                         </div>
                     </div>

@@ -81,7 +81,10 @@ Route::get('/add_cart/{id}',[ComputerController::class,'addcart']);
 Route::get('/cart',[CartControllre::class,'showCart']);
 
 // checkout hre
-Route::get('/checkout',[CartControllre::class,'checkOut']);
+Route::get('/checkout/{id}',[CartControllre::class,'checkOut']);
+
+// Make payments
+Route::post('/make_payments',[CartControllre::class,'makePayments']);
 
 // cart
 // Route::get('/cart', function () {

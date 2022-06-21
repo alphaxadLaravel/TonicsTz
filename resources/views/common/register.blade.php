@@ -36,6 +36,7 @@
                                     <div class="form-group mb-3">
                                         <input name="phone" type="number" placeholder="Phone 07...." 
                                             autofocus="" class="form-control ">
+                                            
                                             <small class="text-danger">
                                                 @error('phone')
                                                     {{$message}}

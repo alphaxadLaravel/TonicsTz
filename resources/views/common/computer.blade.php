@@ -54,7 +54,7 @@
                                     </div>
                                     {{-- <p>Hii Computer iko vizuri haina shida yoyote ile, bei yake haipungui!</p> --}}
                                     <div class="row gy-3">
-                                        <div class="col-md-5  d-flex">
+                                        {{-- <div class="col-md-5  d-flex">
                                             <button class="btn btn-link px-2"
                                                 onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                                                 <i class="mdi mdi-minus"></i>
@@ -67,7 +67,7 @@
                                                 onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                                 <i class="mdi mdi-plus"></i>
                                             </button>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-7">
                                             <div class="text-center text-lg-start">
                                                 <a href="/add_cart/{{$computer->id}}"

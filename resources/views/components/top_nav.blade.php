@@ -16,8 +16,8 @@
                     @endif
                     @if (session()->get('user')['status'] == 'user')
                         <li><a class="nav-link scrollto" href="/tafuta_out">Tafuta Computer</a></li>
-                        <li><a class="nav-link scrollto" href="/cart"><i class="mdi mdi-cart mdi-24px"></i><span
-                                    class="text-danger">(0)</span></a></li>
+                        <li><a class="nav-link scrollto" href="/cart">Cart <i class="mdi mdi-cart mdi-24px"></i><span
+                                    class="text-danger"></span></a></li>
                         <li><a class="getstarted scrollto" href="/logout">logout</a></li>
                     @endif
                 @else
