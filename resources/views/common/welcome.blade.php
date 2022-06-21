@@ -235,7 +235,7 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/team-22.jpg') }}"  class="img-fluid" >
+                            <img src="{{ asset('img/team-23.jpg') }}"  class="img-fluid" >
                         </div>
                         <div class="member-info">
                             <h4>David Bugingo</h4>
