@@ -11,10 +11,10 @@
         <ul>
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/tafuta_out">Tafuta</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#huduma">Huduma</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#brand">Brand</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/#huduma">Huduma</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="/#brand">Brand</a></li>
           <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

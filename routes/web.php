@@ -7,6 +7,25 @@ Route::get('/', function () {
     return view('common.welcome');
 });
 
+Route::get('/#about', function () {
+    return view('common.welcome');
+});
+
+
+Route::get('/#huduma', function () {
+    return view('common.welcome');
+});
+
+
+Route::get('/#brand', function () {
+    return view('common.welcome');
+});
+
+
+Route::get('/#team', function () {
+    return view('common.welcome');
+});
+
 // login Forms
 Route::get('/login', function () {
     return view('common.login');

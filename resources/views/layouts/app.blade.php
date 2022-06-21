@@ -28,6 +28,8 @@
     <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/icons.min.css') }}" rel="stylesheet">
+
     {{-- CSS Kuu hapa --}}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 

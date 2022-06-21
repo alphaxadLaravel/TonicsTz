@@ -19,11 +19,7 @@
                             vigezo upendavyo tukuletee mahala ulipo kwa bei rahisi kuliko Madukani!
                         </p>
                         <div class="text-center text-lg-start">
-<<<<<<< HEAD
                             <a href="/tafuta_out"
-=======
-                            <a href="#"
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
                                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                 <span>Tafuta Computer</span>
                                 <i class="bi bi-arrow-right"></i>

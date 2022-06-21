@@ -1,15 +1,8 @@
 @extends('layouts.app')
 
 @section('pages')
-<<<<<<< HEAD
     <section class="inner-page mt-5">
         <div class="container">
-=======
- 
-
-    <section class="inner-page mt-5">
-        <div class="container" >
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
             <div class="row feature-icons" data-aos="fade-up">
                 <div class="row">
 
@@ -21,11 +14,6 @@
                         <form action="" method="post">
                             <div class="row  gy-4">
                                 <span class="text-tonics">Tafuta Computer Hapa!</span>
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
                                 <div class="col-md-6 " data-aos="fade-up">
                                     <div class="form-group">
                                         <small class="text-muted mb-2">Aina ya Computer</small>
@@ -38,43 +26,26 @@
                                 </div>
                                 <div class="col-md-6 " data-aos="fade-up">
                                     <div class="form-group">
-<<<<<<< HEAD
                                         <small class="text-muted mb-2">Uwezo wa RAM</small>
                                         <select class="form-control" name="" id="">
                                             <option value="">chagua RAM...</option>
                                             <option value="">2Gb</option>
                                             <option value="">4GB</option>
-=======
-                                        <small class="text-muted mb-2">Aina ya Computer</small>
-                                        <select class="form-control" name="" id="">
-                                            <option value="">chagua Aina...</option>
-                                            <option value="">Laptop</option>
-                                            <option value="">Desktop</option>
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 " data-aos="fade-up">
                                     <div class="form-group">
-<<<<<<< HEAD
                                         <small class="text-muted mb-2">Uwezo wa HDD</small>
                                         <select class="form-control" name="" id="">
                                             <option value="">chagua HDD...</option>
                                             <option value="">250GB</option>
                                             <option value="">500GB</option>
-=======
-                                        <small class="text-muted mb-2">Aina ya Computer</small>
-                                        <select class="form-control" name="" id="">
-                                            <option value="">chagua Aina...</option>
-                                            <option value="">Laptop</option>
-                                            <option value="">Desktop</option>
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 " data-aos="fade-up">
                                     <div class="form-group">
-<<<<<<< HEAD
                                         <small class="text-muted mb-2">Aina ya Brand</small>
                                         <select class="form-control" name="" id="">
                                             <option value="">chagua brand...</option>
@@ -122,17 +93,6 @@
                                 </div>
                             </div>
                             
-=======
-                                        <small class="text-muted mb-2">Aina ya Computer</small>
-                                        <select class="form-control" name="" id="">
-                                            <option value="">chagua Aina...</option>
-                                            <option value="">Laptop</option>
-                                            <option value="">Desktop</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
->>>>>>> 6de3da25813a41530dec829e7b12f77e8355c1b2
                         </form>
                     </div>
 
