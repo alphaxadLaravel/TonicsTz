@@ -140,10 +140,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 " data-aos="fade-up">
+                                <div class="col-md-6 " >
                                     <div class="form-group">
                                         <small class="text-muted mb-2">Bei ya Computer</small>
-                                          <input type="number" class="form-control" name="price" id="" aria-describedby="helpId" placeholder="">
+                                          <input type="number" class="form-control" name="price" id="" aria-describedby="helpId" placeholder="ingiza Bei hapa...eg.200000">
                                         <small class="text-danger">
                                             @error('price')
                                                 {{ $message }}

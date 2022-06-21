@@ -38,6 +38,7 @@ class ComputerController extends Controller
             'hali' => request('hali'),
             'price' => request('price'),
             'picha' => $path,
+            'status'=>"Added Computer"
         ]);
 
         session()->flash('uploaded', '');

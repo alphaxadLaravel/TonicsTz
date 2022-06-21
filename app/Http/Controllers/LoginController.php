@@ -11,12 +11,11 @@ class LoginController extends Controller
     public function register()
     {
         request()->validate([
-            'username' => 'required|string',
-            'password' => 'required|string',
+            'username' => 'required|string|min:3|max:8',
+            'password' => 'required|string|min:4|max:8',
             'password_confirmation' => 'required|string',
-            'phone' => 'required|numeric|unique:users|min:9|max:11',
+            'phone' => 'required|digits:10'
         ]);
-
 
         if (request('password') == request('password_confirmation')) {
             $check = User::where(['username' => request()->username])->first();
@@ -29,10 +28,10 @@ class LoginController extends Controller
                     'status' => "user",
                 ]);
 
-                return redirect('/');
+                return redirect('/login');
             } else {
                 session()->flash('present', '');
-                return redirect('/');
+                return redirect('/login');
             }
         }
     }
