@@ -7,33 +7,23 @@
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-10">
 
+                        @foreach ($cart as $item)
                         <div class="card rounded-3 mb-4" data-aos="fade-down">
                             <div class="card-body p-3">
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
-                                        <img src="{{ asset('img/pc-3.webp') }}" class="img-fluid rounded-3" alt="">
+                                        <img src={{{$item->computer->picha}}} class="img-fluid rounded-3" alt="">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
-                                        <p class="lead text-tonics fw-normal mb-2">Lenovo thinkPard</p>
-                                        <p><span class="text-muted">HDD: </span>500GB <span class="text-muted">RAM:
-                                            </span>2GB</p>
+                                        <p class="lead text-tonics fw-normal mb-2">{{$item->computer->brand}}</p>
+                                        <p><span class="text-muted">HDD: </span>{{$item->computer->hdd}} <span class="text-muted">RAM:
+                                            </span>{{$item->computer->ram}}</p>
                                     </div>
-                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        <button class="btn btn-link px-2"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                            <i class="mdi mdi-minus"></i>
-                                        </button>
-
-                                        <input id="form1" min="0" name="quantity" value="2" type="number"
-                                            class="form-control form-control-sm" />
-
-                                        <button class="btn btn-link px-2"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                            <i class="mdi mdi-plus"></i>
-                                        </button>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <p><span class="text-muted">Quantity: </span>{{{$item->Quantity}}} </p>
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                        <h5 class="mb-0"><sub class="text-muted">Tsh</sub> 499,000/=</h5>
+                                        <h5 class="mb-0"><sub class="text-muted">Tsh</sub> {{$item->Total}}</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                         <a href="#!" class="text-danger"><i class="mdi mdi-delete mdi-24px"></i></a>
@@ -41,6 +31,8 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                       
 
                         <div class="card " data-aos="fade-up">
                             <div class="card-body">

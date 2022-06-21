@@ -16,4 +16,8 @@ class User extends Model
         'phone',
         'status',
     ];
+
+    public function cart(){
+        return $this->hasMany(Cart::class);
+    }
 }

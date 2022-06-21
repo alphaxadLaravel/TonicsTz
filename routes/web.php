@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ComputerController;
+use App\Http\Controllers\CartControllre;
 
 // URL Route zote za System huandikwa hapa
 Route::get('/', function () {
@@ -48,10 +49,7 @@ Route::get('/computer', function () {
     return view('common.computer');
 });
 
-// cart
-Route::get('/cart', function () {
-    return view('common.cart');
-});
+
 
 // Ongeza hapa
 Route::get('/add', function () {
@@ -59,6 +57,8 @@ Route::get('/add', function () {
 });
 
 Route::get('/logout', function () {
+    session()->forget('logged');
+    session()->forget('user');
     return view('common.login');
 });
 
@@ -70,4 +70,21 @@ Route::post('/login_here',[LoginController::class,'login']);
 
 // add new computer
 Route::post('/add_computer',[ComputerController::class,'addComputer']);
+
+// search device here
+Route::post('/search_computer',[ComputerController::class,'searchComputer']);
+
+// Add device to cart
+Route::get('/add_cart/{id}',[ComputerController::class,'addcart']);
+
+// show the cart
+Route::get('/cart',[CartControllre::class,'showCart']);
+
+// checkout hre
+Route::get('/checkout',[CartControllre::class,'checkOut']);
+
+// cart
+// Route::get('/cart', function () {
+//     return view('common.cart');
+// });
 
