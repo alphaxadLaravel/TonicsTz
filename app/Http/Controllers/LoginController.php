@@ -16,50 +16,59 @@ class LoginController extends Controller
             'password_confirmation' => 'required|string',
             'phone' => 'required|numeric|unique:users|min:9|max:11',
         ]);
-        
+
 
         if (request('password') == request('password_confirmation')) {
-            $check = User::where(['username'=>request()->username])->first();
+            $check = User::where(['username' => request()->username])->first();
 
-            if(!$check){
+            if (!$check) {
                 User::Create([
                     'username' => request('username'),
                     'password' => request('password'),
                     'phone' => request('phone'),
+                    'status' => "user",
                 ]);
 
                 return redirect('/');
-            }else{
-                session()->flash('present','');
+            } else {
+                session()->flash('present', '');
                 return redirect('/');
             }
-           
         }
     }
 
-    public function login(){
+    public function login()
+    {
         request()->validate([
             'username' => 'required|string',
             'password' => 'required|string',
         ]);
-        
 
-        $check = User::where(['username'=>request()->username])->first();
-        dd($check);
 
-        if(!$check){
-            
-            session()->flash('none','');
-            return redirect('/');
-        } if($check->password != request('password')){
-            
-            session()->flash('none','');
-            return redirect('/');
+        $check = User::where(['username' => request()->username])->first();
+
+        if (!$check) {
+
+            session()->flash('none', '');
+            return redirect('/login');
         }
-        elseif($check->status == "admin" || $check->status == "user"){
+        if ($check->password != request('password')) {
 
-            request()->session()->put('user',$check);
-            return redirect('/');
+            session()->flash('none', '');
+            return redirect('/login');
+        } elseif ($check->status == "admin" || $check->status == "user") {
+
+            if ($check->status == "admin") {
+                request()->session()->put('user', $check);
+                request()->session()->put('logged', "Yes");
+
+                return redirect('/add');
+            } elseif ($check->status == "user") {
+                request()->session()->put('user', $check);
+                request()->session()->put('logged', "Yes");
+
+                return redirect('/tafuta_out');
+            }
         }
     }
 }

@@ -6,7 +6,12 @@
 
             <div class="container" data-aos="fade-up">
                 <div class="row gx-0">
-    
+                    @if (Session::has('uploaded'))
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                      Computer uploaded successfully!
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  @endif
                     <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="content">
                             <h2>Lenovo ThinkPard</h2>

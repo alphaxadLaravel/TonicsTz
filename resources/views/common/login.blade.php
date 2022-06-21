@@ -21,10 +21,20 @@
                                     <div class="form-group mb-3">
                                         <input name="username" type="text" placeholder="Username" required=""
                                             autofocus="" class="form-control ">
+                                            <small class="text-danger">
+                                                @error('username')
+                                                    {{$message}}
+                                                @enderror
+                                            </small>
                                     </div>
                                     <div class="form-group mb-3">
                                         <input name="password" type="password" placeholder="Password" required=""
                                             class="form-control ">
+                                            <small class="text-danger">
+                                                @error('password')
+                                                    {{$message}}
+                                                @enderror
+                                            </small>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
                                         <input id="customCheck1" type="checkbox" checked class="custom-control-input">

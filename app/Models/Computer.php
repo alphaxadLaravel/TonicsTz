@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Computer extends Model
 {
     use HasFactory;
+
+    protected $table = "computers";
+
+    protected $fillable = [
+        'category',
+        'ram',
+        'hdd',
+        'brand',
+        'processor',
+        'generation',
+        'hali',
+        'price',
+        'picha',
+        'status'
+    ];
 }
