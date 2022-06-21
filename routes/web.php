@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 // URL Route zote za System huandikwa hapa
 Route::get('/', function () {
@@ -56,4 +57,6 @@ Route::get('/add', function () {
     return view('admin.add');
 });
 
+// register here
+Route::post('/register_here',[LoginController::class,'register']);
 
