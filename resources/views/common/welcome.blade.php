@@ -262,7 +262,7 @@
                             <img src="{{ asset('img/team-25.jpg') }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Shafii David</h4>
+                            <h4>Shafii Yahya</h4>
                             <span>CTO</span>
                         </div>
                     </div>
