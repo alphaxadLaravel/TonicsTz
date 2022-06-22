@@ -19,7 +19,7 @@
                                 <form action="/login_here" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
-                                        <input name="username" type="text" placeholder="Username" required=""
+                                        <input name="username" type="text" placeholder="Username" 
                                             autofocus="" class="form-control ">
                                             <small class="text-danger">
                                                 @error('username')
@@ -28,7 +28,7 @@
                                             </small>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input name="password" type="password" placeholder="Password" required=""
+                                        <input name="password" type="password" placeholder="Password" 
                                             class="form-control ">
                                             <small class="text-danger">
                                                 @error('password')

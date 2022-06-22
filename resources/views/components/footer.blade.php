@@ -60,7 +60,7 @@
         &copy; Copyright <strong><span>Tonics Tz</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-         Designed by <a href="http://alphajozee.me/alpha">Alpha Jozee</a>
+         Designed by <a href="#">Mtey Nuru</a>
       </div>
     </div>
   </footer>
