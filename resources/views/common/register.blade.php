@@ -4,13 +4,11 @@
         <div class="row no-gutter">
             <!-- The image half -->
             <div class="col-md-6 d-none d-md-flex bg-image" style="background-image: url('{{ asset('img/out.jpg') }}')"></div>
-
-
             <!-- The content half -->
             <div class="col-md-6 bg-light">
                 <div class="login d-flex align-items-center py-5">
 
-
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-10 col-xl-7 mx-auto">
@@ -20,7 +18,7 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                               @endif
-                                <h3 class="text-tonics">Tonics Tz</h3>
+                              <h3 class="text-tonics"><a href="/" class="text-tonics">Tonics Tz</a></h3>
                                 <p class="text-muted mb-4">Tengeneza Account mpya!</p>
                                 <form action="/register_here" method="POST">
                                     @csrf

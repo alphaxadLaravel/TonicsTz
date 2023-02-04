@@ -3,9 +3,14 @@
 @section('pages')
     <section class="inner-page mt-5">
         <div class="container">
+            @if (session()->has('success'))
+            <div class="alert alert-success fade show" role="alert">
+                <strong>Success!</strong> {{ session('success') }}
+            </div>
+            @endif
             <div class="row feature-icons" data-aos="fade-up">
                 <div class="row">
-
+                   
                     <div class="col-xl-4 text-center d-none d-md-block" data-aos="fade-right" data-aos-delay="100">
                         <img src="{{ asset('img/lap.jpg') }}" class="img-fluid p-4" alt="">
                     </div>

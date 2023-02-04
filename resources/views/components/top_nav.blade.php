@@ -12,6 +12,8 @@
                 @if (session()->get('logged') == 'Yes')
                     @if (session()->get('user')['status'] == 'admin')
                         <li><a class="nav-link scrollto" href="/add">Add Computer</a></li>
+                        <li><a class="nav-link scrollto" href="/all_computers">Computers</a></li>
+                        <li><a class="nav-link scrollto" href="/all_payments">Payments</a></li>
                         <li><a class="getstarted scrollto" href="/logout">logout</a></li>
                     @endif
                     @if (session()->get('user')['status'] == 'user')

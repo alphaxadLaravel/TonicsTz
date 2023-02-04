@@ -232,26 +232,14 @@
 
             <div class="row gy-4">
 
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/team-23.jpg') }}" style="height: 280px"  class="img-fluid" >
+                            <img src="{{ asset('img/team-25.jpg') }}" style="height: 280px" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>David Bugingo</h4>
-                            <span>Chief Executive Officer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="{{ asset('img/team2.jpg') }}" style="height: 280px" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>Mtey Mtey</h4>
-                            <span>Product Manager</span>
+                            <h4>Shafii Yahya</h4>
+                            <span>CTO</span>
                         </div>
                     </div>
                 </div>
@@ -268,14 +256,26 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{{ asset('img/feli.jpg') }}"  style="height: 280px; width: 100%" class="img-fluid w-100" alt="">
+                            <img src="{{ asset('img/team-25.jpg') }}" style="height: 280px" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
-                            <h4>Felister Feso</h4>
-                            <span>Muhasibu</span>
+                            <h4>Shafii Yahya</h4>
+                            <span>CTO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member">
+                        <div class="member-img">
+                            <img src="{{ asset('img/team-25.jpg') }}" style="height: 280px" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Shafii Yahya</h4>
+                            <span>CTO</span>
                         </div>
                     </div>
                 </div>

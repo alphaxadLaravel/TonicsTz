@@ -5,16 +5,24 @@
             <!-- The image half -->
             <div class="col-md-6 d-none d-md-flex bg-image" style="background-image: url('{{ asset('img/out.jpg') }}')"></div>
 
-
             <!-- The content half -->
             <div class="col-md-6 bg-light">
                 <div class="login d-flex align-items-center py-5">
-
-
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-10 col-xl-7 mx-auto">
-                                <h3 class="text-tonics">Tonics Tz</h3>
+                                @if (session()->has('success'))
+                                <div class="alert alert-success fade show" role="alert">
+                                    <strong>Success!</strong> {{ session('success') }}
+                                </div>
+                                @endif
+                                @if (session()->has('error'))
+                                <div class="alert alert-danger fade show" role="alert">
+                                    <strong>Error!</strong> {{ session('error') }}
+                                </div>
+                                @endif
+                                <h3 class="text-tonics"><a href="/" class="text-tonics">Tonics Tz</a></h3>
                                 <p class="text-muted mb-4">Ingia Katika Account yako!</p>
                                 <form action="/login_here" method="POST">
                                     @csrf

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Session;
+use Stevebauman\Location\Facades\Location;
 
 class LoginController extends Controller
 {
@@ -21,6 +23,7 @@ class LoginController extends Controller
             $check = User::where(['username' => request()->username])->first();
 
             if (!$check) {
+
                 User::Create([
                     'username' => request('username'),
                     'password' => request('password'),
@@ -28,7 +31,8 @@ class LoginController extends Controller
                     'status' => "user",
                 ]);
 
-                return redirect('/login');
+                return redirect('/login')
+                    ->with('success', 'You have successfully registered');;
             } else {
                 session()->flash('present', '');
                 return redirect('/login');
@@ -48,13 +52,13 @@ class LoginController extends Controller
 
         if (!$check) {
 
-            session()->flash('none', '');
-            return redirect('/login');
+            return redirect('/login')
+                ->with('error', 'Invalid username or password');
         }
         if ($check->password != request('password')) {
 
-            session()->flash('none', '');
-            return redirect('/login');
+            return redirect('/login')
+                ->with('error', 'Invalid username or password');
         } elseif ($check->status == "admin" || $check->status == "user") {
 
             if ($check->status == "admin") {
@@ -69,5 +73,31 @@ class LoginController extends Controller
                 return redirect('/tafuta_out');
             }
         }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        session()->forget('logged');
+        session()->forget('user');
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+
+    // check ip
+    public function checkIp()
+    {
+        // get user location
+        $ip = request()->ip(); /* Static IP address */
+
+        // $ip = '192.168.235.57'; /* Static IP address */
+        $currentUserInfo = Location::get($ip);
+
+        dd($currentUserInfo);
     }
 }

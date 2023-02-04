@@ -22,7 +22,7 @@ class ComputerController extends Controller
             'generation' => 'required|string',
             'hali' => 'required|string',
             'price' => 'required|numeric',
-            'picha' => 'required|mimes:jpg,png,jpeg|max:20048',
+            'picha' => 'required|mimes:jpg,png,jpeg,webp|max:20048',
         ]);
 
         $photoName = time() . '.' . request('picha')->extension();
@@ -31,21 +31,39 @@ class ComputerController extends Controller
 
         $path = 'computer/' . $photoName;
 
-        Computer::Create([
-            'category' => request('category'),
-            'ram' => request('ram'),
-            'hdd' => request('hdd'),
-            'brand' => request('brand'),
-            'processor' => request('processor'),
-            'generation' => request('generation'),
-            'hali' => request('hali'),
-            'price' => request('price'),
-            'picha' => $path,
-            'status' => "Added Computer"
-        ]);
+        // check if computer exists
+        $check = Computer::where('hdd', request('hdd'))
+            ->where('ram', request('ram'))
+            ->where('category', request('category'))
+            ->where('brand', request('brand'))
+            ->where('processor', request('processor'))
+            ->where('generation', request('generation'))
+            ->where('hali', request('hali'))
+            ->where('price', request('price'))
+            ->where('picha', $path)
+            ->first();
 
-        session()->flash('uploaded', '');
-        return redirect('/add');
+        if ($check) {
+            return redirect('/add')
+                ->with('error', 'Computer already exists');
+        }else{
+            Computer::create([
+                'category' => request('category'),
+                'ram' => request('ram'),
+                'hdd' => request('hdd'),
+                'brand' => request('brand'),
+                'processor' => request('processor'),
+                'generation' => request('generation'),
+                'hali' => request('hali'),
+                'price' => request('price'),
+                'picha' => $path,
+                'status' => "Added Computer"
+            ]);
+    
+            return redirect('/all_computers')
+            ->with('success', 'Computer Added Successfully');
+        }
+
     }
 
     public function searchComputer()
@@ -78,19 +96,58 @@ class ComputerController extends Controller
         if(session()->get('user') || session()->get('logged') ){
 
             $user_id = session()->get('user')['id'];
-            
-            Cart::create([
-                'user_id'=> $user_id,
-                'computer_id'=> $id,
-                'Quantity' => "1",
-                'Total'=> "20000",
-                'status'=> "Adeded",
-            ]);
 
-            return redirect("/cart");
+            // check if computer exists in cart
+            $check = Cart::where('user_id', $user_id)
+            ->where('computer_id', $id)
+            ->first();
+
+            if(!$check){
+
+                // check if has computer in cart
+                $check = Cart::where('user_id', $user_id)
+                ->first();
+
+                if($check){
+                    return redirect("/cart")
+                ->with('error', 'You have a computer in cart, please purchase it or remove it from cart!');
+                }else{
+                    Cart::create([
+                        'user_id'=> $user_id,
+                        'computer_id'=> $id,
+                    ]);
+        
+                    return redirect("/cart")
+                    ->with('success', 'Computer Added to Cart Successfully')
+                    ;
+                }
+
+            }else{
+                return redirect("/cart")
+                ->with('error', 'Computer already exists in cart');
+
+            }
+            
+           
 
         }else{
             return redirect("/login");
         }
+    }
+
+    // allComputers
+    public function allComputers()
+    {
+        $computers = Computer::orderBy('id', 'desc')->get();
+        return view('admin.computers', ['computers' => $computers]);
+    }
+
+    // deleteComputer
+    public function deleteComputer($id)
+    {
+        $computer = Computer::find($id);
+        $computer->delete();
+        return redirect('/all_computers')
+        ->with('success', 'Computer Deleted Successfully');
     }
 }

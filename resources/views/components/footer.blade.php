@@ -48,9 +48,7 @@
               <strong>Simu:</strong> +255 743 196 599<br>
               <strong>Email:</strong> tonicstz@gmail.com<br>
             </p>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -60,7 +58,7 @@
         &copy; Copyright <strong><span>Tonics Tz</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-         Designed by <a href="#">Mtey Nuru</a>
+         Designed by <a href="#">Shafii</a>
       </div>
     </div>
   </footer>

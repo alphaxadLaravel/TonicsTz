@@ -20,4 +20,8 @@ class User extends Model
     public function cart(){
         return $this->hasMany(Cart::class);
     }
+
+    public function payments(){
+        return $this->hasMany(Payments::class);
+    }
 }

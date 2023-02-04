@@ -27,4 +27,8 @@ class Computer extends Model
     public function cart(){
         return $this->hasMany(Cart::class);
     }
+
+    public function payment(){
+        return $this->hasMany(Payments::class);
+    }
 }

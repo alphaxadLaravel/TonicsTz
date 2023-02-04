@@ -5,6 +5,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\CartControllre;
 
+// check ip
+Route::get('/check_ip', [LoginController::class, 'checkIp']);
+
 // URL Route zote za System huandikwa hapa
 Route::get('/', function () {
     return view('common.welcome');
@@ -49,17 +52,14 @@ Route::get('/computer', function () {
     return view('common.computer');
 });
 
+Route::get('/success', function () {
+    return view('common.success');
+});
 
 
 // Ongeza hapa
 Route::get('/add', function () {
     return view('admin.add');
-});
-
-Route::get('/logout', function () {
-    session()->forget('logged');
-    session()->forget('user');
-    return view('common.login');
 });
 
 // register here
@@ -85,6 +85,21 @@ Route::get('/checkout/{id}',[CartControllre::class,'checkOut']);
 
 // Make payments
 Route::post('/make_payments',[CartControllre::class,'makePayments']);
+
+// all computers
+Route::get('/all_computers',[ComputerController::class,'allComputers']);
+
+// delete computer
+Route::get('/delete_computer/{id}',[ComputerController::class,'deleteComputer']);
+
+// logout
+Route::get('/logout',[LoginController::class,'logout']);
+
+// remove from cart
+Route::get('/remove/{id}',[CartControllre::class,'remove']);
+
+// all payments
+Route::get('/all_payments',[CartControllre::class,'allPayments']);
 
 // cart
 // Route::get('/cart', function () {

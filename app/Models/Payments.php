@@ -5,22 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Payments extends Model
 {
     use HasFactory;
-    protected $table = "carts";
 
     protected $fillable = [
         'user_id',
         'computer_id',
+        'mkoa',
+        'mahali',
+        'payment',
+        'Phone',
     ];
 
-    public function user(){
+    // user
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function computer(){
+    // computer
+    public function computer()
+    {
         return $this->belongsTo(Computer::class);
     }
-
 }
